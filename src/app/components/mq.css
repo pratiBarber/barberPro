@@ -1,0 +1,12 @@
+@media (max-width: 770px) {
+    .header-links {
+     display: none;
+    }
+ 
+    .button-burguer {
+     display: flex;
+    }
+ }
+ 
+
+ 
