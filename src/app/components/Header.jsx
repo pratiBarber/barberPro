@@ -1,13 +1,12 @@
 "use client";
 
 import { useState } from 'react';
-import "./mq.css"
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
-        <header className=" shadow-2xl bg-white">
-            <div className=" flex justify-between max-w-[1500px] w-full mx-auto bg-white p-7 text-black font-sans text-base font-normal">
+        <header className="shadow-2xl bg-white">
+            <div className="flex justify-between max-w-[1500px] w-full mx-auto bg-white p-7 text-black font-sans text-base font-normal">
                 <div className="flex items-center gap-[67px]">
                     <img src="/logo.png" alt="logo" />
                 </div>
@@ -16,10 +15,10 @@ export default function Header() {
                     <a href="#">Início</a>
                     <a href="#">Opinião dos Clientes</a>
                 </div>
-                <div className="header-links  flex flex-col md:flex-row md:gap-[67px] items-center mt-4 md:mt-0 custom-button-spacing">
+                <div className="header-links flex flex-col md:flex-row md:gap-[67px] items-center mt-4 md:mt-0 custom-button-spacing">
                     <a href="#">Fazer Login</a>
                     <a
-                        className=" button px-10 py-2.5 rounded-lg bg-[#D99C52] text-white mt-4 md:mt-0"
+                        className="button px-10 py-2.5 rounded-lg bg-[#D99C52] text-white mt-4 md:mt-0"
                         href="#"
                     >
                         Crie sua Conta
@@ -65,6 +64,7 @@ export default function Header() {
                     </a>
                 </nav>
             )}
+
         </header>
     );
 }
