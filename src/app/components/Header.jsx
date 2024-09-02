@@ -6,8 +6,8 @@ export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
         <header className="shadow-2xl bg-white">
-            <div className="flex justify-between max-w-[1500px] w-full mx-auto bg-white p-7 text-black font-sans text-base font-normal">
-                <div className="flex items-center gap-[67px]">
+            <div className="flex justify-between max-w-[1500px] w-full mx-auto bg-white py-7 text-black font-sans text-base font-normal">
+                <div className="max-w-[263px] w-full flex items-center gap-[67px]">
                     <img src="/logo.png" alt="logo" />
                 </div>
 
@@ -33,7 +33,7 @@ export default function Header() {
                         className="focus:outline-none"
                     >
                         <svg
-                            className="w-8 h-8"
+                            className="w-10 h-10"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
