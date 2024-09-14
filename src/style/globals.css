@@ -16,6 +16,9 @@
   .button-burguer {
       display: flex;
   }
+
+  header {padding: 0px 10px;}
+  footer {padding: 0% 10px;}
 }
 
 @media (prefers-color-scheme: dark) {

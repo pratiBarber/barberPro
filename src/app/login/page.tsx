@@ -11,15 +11,12 @@ const Login: React.FC = () => {
 
   return (
     <div className="flex h-screen">
-      {/* Esquerda: com padrão de fundo */}
-      <div className="flex-1 bg-black bg-[url('../../public/banner.png')] bg-repeat bg-cover"></div>
-      
-      {/* Direita: Formulário de Login */}
+      <div className="flex-1 bg-black bg-[url('../../public/banner.jpg')] bg-center bg-[length:50%]"></div>
       <div className="flex-1 bg-[#D99C52] flex justify-center items-center">
-        <div className="w-[300px] bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="mb-5 text-black text-7xl">Login</h2>
-          <p className="mb-5 text-black">
-            Não tem uma conta ainda? <a href="#" className="text-red-500">Registre-se</a>
+        <div className="w-[300px] p-8 bg-[#D99C52]">
+          <h2 className="mb-5 text-black text-7xl text-center">Login</h2>
+          <p className="mb-5 text-black text-center">
+            Não tem uma conta ainda? <a href="#" className="text-red-500 ">Registre-se</a>
           </p>
           <form className="flex flex-col">
             <label htmlFor="email" className="mb-1 text-black">Email</label>
@@ -27,23 +24,27 @@ const Login: React.FC = () => {
               type="email"
               id="email"
               placeholder="Digite seu e-mail"
-              className="mb-4 p-2 text-lg border border-gray-300 rounded"
+              className="mb-4 p-2 h-[50px] text-lg bg-[#CFB28F] rounded placeholder-gray-900 text-black"
             />
             
             <label htmlFor="senha" className="mb-1 text-black">Senha</label>
-            <div className="flex items-center mb-4">
+            <div className="relative mb-4">
               <input
                 type={showPassword ? "text" : "password"}
                 id="senha"
                 placeholder="Digite sua senha"
-                className="flex-1 p-2 text-lg border border-gray-300 rounded"
+                className="p-2 w-full h-[50px] text-lg bg-[#CFB28F] rounded placeholder-gray-900 text-black"
               />
               <button
                 type="button"
-                className="ml-2 cursor-pointer text-gray-600"
                 onClick={togglePasswordVisibility}
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-600"
               >
-                👁️
+                {showPassword ? (
+                  <i className="fas fa-eye-slash"></i>
+                ) : (
+                  <i className="fas fa-eye"></i>
+                )}
               </button>
             </div>
             
