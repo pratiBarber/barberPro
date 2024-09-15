@@ -1,4 +1,5 @@
 "use client";
+import "./estilo.css";
 
 import React, { useState } from 'react';
 
@@ -10,30 +11,35 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="flex h-screen">
-      <div className="flex-1 bg-black bg-[url('../../public/banner.jpg')] bg-center bg-[length:50%]"></div>
-      <div className="flex-1 bg-[#D99C52] flex justify-center items-center">
-        <div className="w-[300px] p-8 bg-[#D99C52]">
-          <h2 className="mb-5 text-black text-7xl text-center">Login</h2>
-          <p className="mb-5 text-black text-center">
-            Não tem uma conta ainda? <a href="#" className="text-red-500 ">Registre-se</a>
+    <div className="login-pai flex flex-col md:flex-row h-screen">
+      {/* Imagem de fundo do lado esquerdo */}
+      <div className="login-banner md:flex-1 bg-black bg-[url('../../public/banner.jpg')] bg-center bg-cover md:bg-[length:50%] h-64 md:h-auto"></div>
+
+      {/* Seção de login */}
+      <div className="login-form md:flex-1 bg-[#D99C52] flex justify-center items-center">
+        <div className="w-full max-w-md p-8 bg-[#D99C52]">
+          <h2 className="mb-5 text-black text-4xl md:text-7xl text-center">Login</h2>
+          <p className="pe mb-5 text-black text-center text-lg md:text-base">
+            Não tem uma conta ainda? <a href="#" className="text-red-500">Registre-se</a>
           </p>
-          <form className="flex flex-col">
-            <label htmlFor="email" className="mb-1 text-black">Email</label>
+          <form className="forms flex flex-col">
+            {/* Input de email */}
+            <label htmlFor="email" className="mb-1 text-black text-lg">Email</label>
             <input
               type="email"
               id="email"
               placeholder="Digite seu e-mail"
-              className="mb-4 p-2 h-[50px] text-lg bg-[#CFB28F] rounded placeholder-gray-900 text-black"
+              className="inputss mb-4 p-2 h-[50px] text-lg bg-[#CFB28F] rounded placeholder-gray-900 text-black"
             />
             
-            <label htmlFor="senha" className="mb-1 text-black">Senha</label>
+            {/* Input de senha */}
+            <label htmlFor="senha" className=" inputs mb-1 text-black text-lg">Senha</label>
             <div className="relative mb-4">
               <input
                 type={showPassword ? "text" : "password"}
                 id="senha"
                 placeholder="Digite sua senha"
-                className="p-2 w-full h-[50px] text-lg bg-[#CFB28F] rounded placeholder-gray-900 text-black"
+                className="inputss p-2 w-full h-[50px] text-lg bg-[#CFB28F] rounded placeholder-gray-900 text-black"
               />
               <button
                 type="button"
@@ -47,10 +53,11 @@ const Login: React.FC = () => {
                 )}
               </button>
             </div>
-            
+
+            {/* Botão de login */}
             <button
               type="submit"
-              className="p-2 bg-black text-white text-lg rounded hover:bg-gray-800"
+              className="buttons p-2 bg-black text-white text-lg rounded hover:bg-gray-800"
             >
               Fazer Login
             </button>
