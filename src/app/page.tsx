@@ -1,6 +1,6 @@
 import Header from "./components/Header"
 import Footer from "./components/Footer"
-import Homee from "./home/Home"
+import Homee from "./home/page"
 import Login from "./login/page"
 
 
