@@ -1,13 +1,13 @@
-import Header from "./components/Header"
-import Footer from "./components/Footer"
-import Homee from "./home/Home"
-import Login from "./login/page"
+import Header from './components/Header'
+import Home from './home/Home'
+import Footer from './components/Footer'
 
-
-export default function Home(){
+export default function App(){
     return (
         <main>
-          <Login></Login>
+            <Header></Header>
+            <Home></Home>
+            <Footer></Footer>
         </main>
 )
 }
