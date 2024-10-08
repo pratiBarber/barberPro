@@ -8,6 +8,8 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+
+
 @media (max-width: 770px) {
   /* HEADER */
   .header-links {display: none;}
@@ -44,4 +46,18 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Estilos para o container */
+.container {
+  display: flex;
+  align-items: flex-start; /* Alinha os itens ao topo */
+}
+
+/* Estilos do Navbar */
+
+
+.conts {
+  background: url(/fundo.png);
+  background-repeat: repeat;
 }
