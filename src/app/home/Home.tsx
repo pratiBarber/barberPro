@@ -41,7 +41,7 @@ export default function Home() {
     const visibleBarbers = barbers.slice(currentIndex, currentIndex + itemsPerPage);
 
     // Função para obter o caminho da imagem de estrelas correspondente ao rating
-    const getStarImage = (rating) => {
+    const getStarImage = (rating: number) => {
         let roundedRating;
         const decimalPart = rating % 1; // Parte decimal do rating
 
@@ -120,25 +120,6 @@ export default function Home() {
                     <button onClick={handleNext} className="p-2 bg-gray-300 rounded-full">
                         &gt;
                     </button>
-                </div>
-            </section>
-            <section className="carrouselSectionMain">
-                <div className="carrouselDiv">
-                    <div className="carrousel flex overflow-hidden">
-                        <img className="setas" onClick={prevSlide} src="/seta_esquerda.png" alt="seta esquerda" />
-                        <div
-                            className="flex transition-transform duration-500 ease-in-out"
-                        >
-                            {displayedItems.map((item, index) => (
-                                <div key={index} className="dados w-1/3 p-2">
-                                    <img src={item.src} alt={item.alt} className="w-full" />
-                                    <span>{item.nome}</span>
-                                    <span>{item.rate}</span>
-                                </div>
-                            ))}
-                        </div>
-                        <img className="setas" onClick={nextSlide} src="/seta_direita.png" alt="seta direita" />
-                    </div>
                 </div>
             </section>
         </main>
