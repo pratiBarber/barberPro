@@ -38,10 +38,10 @@ const Dashboard = () => {
         <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
 
         <div className="relative z-10 p-6 md:p-10 text-white">
-          <h1 className="text-2xl md:text-3xl font-semibold"> 
+          <h1 className="text-2xl md:text-3xl font-semibold text-center"> 
             Bem-vindo(a), $Username!
           </h1>
-          <p className="mt-1 text-base md:text-lg"> 
+          <p className="mt-1 text-base md:text-lg text-center"> 
             Pronto para seu próximo corte?
           </p>
 
@@ -57,11 +57,11 @@ const Dashboard = () => {
           </div>
 
           <section className="mt-6 md:mt-8">
-            <h2 className="text-xl md:text-2xl font-semibold"> 
+            <h2 className="text-xl md:text-2xl font-semibold text-center"> 
               Meus Agendamentos:
             </h2>
 
-            <div className="mt-4 max-h-56 overflow-y-auto space-y-4 scrollbar-hide">
+            <div className="mt-4 max-h-56 overflow-y-scroll space-y-4  scrollbar-custom">
               <div className="p-3 md:p-4 bg-red-500 rounded-lg shadow-md">
                 <p className="text-xs md:text-base">Horário: 20:00hrs</p>
                 <p className="text-xs md:text-base">Dia: 16/08</p>
