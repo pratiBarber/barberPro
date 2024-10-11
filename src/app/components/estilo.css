@@ -1,0 +1,44 @@
+.nav-bar-pai {
+    background-color: #D99C52;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 0px 20px;
+    font-size: 16px;
+    font-weight: 400px;
+    color: black;
+}
+
+a:hover {
+    color: white;
+}
+
+.foto  {
+    max-width: 50px;
+}
+
+.nav-bar-filho {
+    margin: 22px 0px 54px 0px;
+    border-bottom: 1px solid black;
+    padding-bottom: 22px;
+    text-align: start;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-bar-links ul li {
+    margin-bottom: 20px;
+}
+
+.nav-bar-links {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+@media (max-width: 1000px) {
+    .nav-bar-pai {
+    height:auto;
+    }
+  }

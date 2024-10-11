@@ -71,3 +71,17 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Estilos para o container */
+.container {
+  display: flex;
+  align-items: flex-start; /* Alinha os itens ao topo */
+}
+
+/* Estilos do Navbar */
+
+
+.conts {
+  background: url(/fundo.png);
+  background-repeat: repeat;
+}
