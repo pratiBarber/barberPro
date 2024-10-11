@@ -6,10 +6,9 @@ import Feedback from './review/page'
 export default function App(){
     return (
         <main>
-            <Feedback></Feedback>
-            {/* <Header></Header>
+            <Header></Header>
             <Home></Home>
-            <Footer></Footer> */}
+            <Footer></Footer>
         </main>
 )
 }
