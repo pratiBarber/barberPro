@@ -1,20 +1,19 @@
 "use client"
 
 import {useState} from "react";
-import {useRouter} from "next/navigation";
 
 export default function Home() {
 
     const [currentIndex, setCurrentIndex] = useState(0);
-    const router = useRouter();  // Usado para redirecionar
 
     const barbers = [
-        {id:1, name: "Barbeiro 1", image: "iconPessoa.png", rating: 5.0, description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."},
-        {id:2,name: "Barbeiro 2", image: "iconPessoa2.png", rating: 4.0, description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."},
-        {id:3,name: "Barbeiro 3", image: "IconPessoa3.png", rating: 4.8, description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."},
-        {id:4,name: "Barbeiro 4", image: "iconPessoa.png", rating: 4.3, description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."},
-        {id:5,name: "Barbeiro 5", image: "iconPessoa2.png", rating: 4.7, description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."},
-        {id:6,name: "Barbeiro 6", image: "IconPessoa3.png", rating: 4.6, description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."},
+        {name: "Barbeiro 1", image: "iconPessoa.png", rating: 5.0, description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."},
+        {name: "Barbeiro 2", image: "iconPessoa2.png", rating: 4.0, description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."},
+        {name: "Barbeiro 3", image: "IconPessoa3.png", rating: 4.8, description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."},
+        {name: "Barbeiro 4", image: "iconPessoa.png", rating: 4.3, description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."},
+        {name: "Barbeiro 5", image: "iconPessoa2.png", rating: 4.7, description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."},
+        {name: "Barbeiro 6", image: "IconPessoa3.png", rating: 4.6, description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."},
+        {name: "Barbeiro 7", image: "iconPessoa.png", rating: 4.9, description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."},
     ];
 
     const totalBarbers = barbers.length;
@@ -38,11 +37,6 @@ export default function Home() {
         });
     };
 
-    // Redireciona para a página de todos os barbeiros com o ID na query
-    const handleCardClick = (id: number) => {
-        router.push(`/barbers?id=${id}`); // Redireciona para a página com o ID na query string
-    };
-
     // Pegar os barbeiros visíveis, garantindo que nunca pegue mais do que o disponível
     const visibleBarbers = barbers.slice(currentIndex, currentIndex + itemsPerPage);
 
@@ -51,8 +45,8 @@ export default function Home() {
         let roundedRating;
         const decimalPart = rating % 1; // Parte decimal do rating
 
-        if (decimalPart === 0.5) {
-            roundedRating = 4.5; // Mantém exatamente 4.5
+        if (decimalPart === 0.5 && rating !== 5.0) {
+            roundedRating = rating; // Mantém o rating para valores de 0.5
         } else if (decimalPart > 0.5) {
             roundedRating = Math.ceil(rating); // Arredonda para cima para valores acima de 0.5
         } else {
@@ -95,11 +89,10 @@ export default function Home() {
                         &lt;
                     </button>
                     <div className="flex space-x-6 overflow-hidden">
-                        {visibleBarbers.map((barber) => (
+                        {visibleBarbers.map((barber, index) => (
                             <div
-                                key={barber.id}
-                                className="w-[300px] bg-[#D99C52] shadow-lg rounded-lg p-6 flex flex-col items-center text-black cursor-pointer"
-                                onClick={() => handleCardClick(barber.id)} // Redireciona com o ID
+                                key={index}
+                                className="w-[300px] bg-[#D99C52] shadow-lg rounded-lg p-6 flex flex-col items-center text-black"
                             >
                                 {/* Imagem do barbeiro em forma circular */}
                                 <img
@@ -124,7 +117,6 @@ export default function Home() {
                             </div>
                         ))}
                     </div>
-
                     <button onClick={handleNext} className="p-2 bg-gray-300 rounded-full">
                         &gt;
                     </button>

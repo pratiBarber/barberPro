@@ -122,6 +122,25 @@ export default function Home() {
                     </button>
                 </div>
             </section>
+            <section className="carrouselSectionMain">
+                <div className="carrouselDiv">
+                    <div className="carrousel flex overflow-hidden">
+                        <img className="setas" onClick={prevSlide} src="/seta_esquerda.png" alt="seta esquerda" />
+                        <div
+                            className="flex transition-transform duration-500 ease-in-out"
+                        >
+                            {displayedItems.map((item, index) => (
+                                <div key={index} className="dados w-1/3 p-2">
+                                    <img src={item.src} alt={item.alt} className="w-full" />
+                                    <span>{item.nome}</span>
+                                    <span>{item.rate}</span>
+                                </div>
+                            ))}
+                        </div>
+                        <img className="setas" onClick={nextSlide} src="/seta_direita.png" alt="seta direita" />
+                    </div>
+                </div>
+            </section>
         </main>
     );
 }

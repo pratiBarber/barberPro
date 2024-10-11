@@ -8,6 +8,32 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+.scrollbar-custom::-webkit-scrollbar {
+  width: 8px; /* Largura da barra de rolagem */
+  background: rgba(255, 255, 255, 0.5); /* Fundo da barra de rolagem (transparente) */
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: rgba(241, 241, 241, 0.5); /* Cor de fundo da trilha (transparente) */
+  border-radius: 10px; /* Bordas arredondadas da trilha */
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background: #D99C52; /* Cor do "thumb" (parte que pode ser arrastada) */
+  border-radius: 10px; /* Bordas arredondadas do "thumb" */
+  margin: 2px; /* Adiciona espaço ao redor do "thumb" */
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background: #a3782b; /* Cor do "thumb" ao passar o mouse */
+}
+
+/* Estilização da barra de rolagem para Firefox */
+.scrollbar-custom {
+  scrollbar-width: thin; /* Faz a barra de rolagem mais fina */
+  scrollbar-color: #000000 rgba(241, 241, 241, 0.5); /* Cor do "thumb" e da trilha */
+}
+
 @media (max-width: 770px) {
 
   /* HEADER */
@@ -67,4 +93,18 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Estilos para o container */
+.container {
+  display: flex;
+  align-items: flex-start; /* Alinha os itens ao topo */
+}
+
+/* Estilos do Navbar */
+
+
+.conts {
+  background: url(/fundo.png);
+  background-repeat: repeat;
 }
