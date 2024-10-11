@@ -5,7 +5,7 @@ export default function Footer() {
             <div className="flex flex-row justify-between items-center max-w-[1500px] w-full mx-auto py-8 font-semibold leading-5 text-black">
                 <div className="flex items-center gap-4">
                     <div className="p-4 bg-[#1E1E1E] rounded-full">
-                        <img src="/IconFace.png" alt="face" className="h-4" />
+                        <img src="/IconFACE.png" alt="face" className="h-4" />
                     </div>
                     <div className="p-4 bg-[#1E1E1E] rounded-full">
                         <img src="/IconGIT.png" alt="git" className="h-4" />

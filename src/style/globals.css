@@ -35,17 +35,43 @@
 }
 
 @media (max-width: 770px) {
+
   /* HEADER */
-  .header-links {display: none;}
-  .button-burguer {display: flex;}
-  header {padding: 0px 10px;}
+  .header-links {
+    display: none;
+  }
+
+  .button-burguer {
+    display: flex;
+  }
+
+  header {
+    padding: 0px 10px;
+  }
+
   /* FOOTER */
-  footer {padding: 0% 10px;}
+  footer {
+    padding: 0% 10px;
+  }
 
   /* LOGIN */
-  .login-banner {position: absolute;height: 100%;width: 100%;z-index: -1;}
-  .login-pai {justify-content: center;}
-  .login-form {box-shadow: 3px 10px 100px 10px black;margin: 10px;padding: 20px 10px;border-radius: 8px;}
+  .login-banner {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .login-pai {
+    justify-content: center;
+  }
+
+  .login-form {
+    box-shadow: 3px 10px 100px 10px black;
+    margin: 10px;
+    padding: 20px 10px;
+    border-radius: 8px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -58,12 +84,9 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 @layer utilities {
