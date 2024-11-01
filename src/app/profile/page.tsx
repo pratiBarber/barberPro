@@ -7,6 +7,9 @@ import "slick-carousel/slick/slick-theme.css";
 import "./estilos.css";
 
 export default function Profile() {
+
+    const [isAuthenticated, setIsAuthenticated] = useState(true);
+
     // Profile state
     const [profile, setProfile] = useState({
         nome: "Carlos",
@@ -180,7 +183,9 @@ export default function Profile() {
                         <p className='bg-[#D99C52] p-2 rounded'>Contato: {profile.contato}</p>
                         <p className='bg-[#D99C52] p-2 rounded'>Email: {profile.email}</p>
                         <p className='bg-[#D99C52] p-2 rounded'>Localização: {profile.localizacao}</p>
-                        <button onClick={openEditModal} className="bg-[#D99C52] p-2 rounded">Editar Perfil</button>
+                        {isAuthenticated && (
+                            <button onClick={openEditModal} className="bg-[#D99C52] p-2 rounded">Editar Perfil</button>
+                        )}
                     </div>
                     <div className="max-w-[300px] w-full">
                         <img src={profile.foto} alt="Foto de perfil" className="w-full rounded" />
@@ -246,7 +251,7 @@ export default function Profile() {
                             >
                                 Agendar:
                             </h3>
-                            <button onClick={openAddModal} className="bg-[#d99c52b3] p-2 rounded">Adicionar Novo Serviço</button>
+                            {isAuthenticated && (<button onClick={openAddModal} className="bg-[#d99c52b3] p-2 rounded">Adicionar Novo Serviço</button>)}
                         </div>
                         <ul className="bg-[#D99C52] p-5 rounded mt-5">
                             <li>Serviço: {selectedServices.serviço}</li>
@@ -389,9 +394,13 @@ export default function Profile() {
                 {/* Texto and Slider Section */}
                 <div className="max-w-screen-sm m-auto bg-[#D99C52] flex flex-col justify-center items-center p-5 mt-10 rounded-lg">
                     {/* Editable Texto */}
-                    <p onClick={openTextoModal} className="cursor-pointer text-white">
-                        {texto}
-                    </p>
+                    {isAuthenticated ? (
+                        <p onClick={openTextoModal} className="cursor-pointer text-white">
+                            {texto}
+                        </p>
+                    ) : (
+                        <p className="text-white">{texto}</p>
+                    )}
 
                     {/* Slider */}
                     <div className="max-w-[200px] mt-9 w-full">
