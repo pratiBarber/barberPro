@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -98,7 +98,7 @@ export default function Profile() {
     }
 
     // Handle changes in the new service form
-    function handleNewServiceChange(e) {
+    function handleNewServiceChange(e: { target: { name: any; value: any; }; }) {
         const { name, value } = e.target;
         setNewService(prevState => ({
             ...prevState,
@@ -132,22 +132,22 @@ export default function Profile() {
     };
 
     // Functions to save selected service details
-    function saveService(serviço, preco) {
+    function saveService(servico: string, preco: string) {
         setSelectedServices(prevState => ({
             ...prevState,
-            serviço: serviço,
+            serviço: servico,
             preco: preco
         }));
     }
 
-    function saveHours(horario) {
+    function saveHours(horario: string) {
         setSelectedServices(prevState => ({
             ...prevState,
             horario: horario
         }));
     }
 
-    function saveData(data) {
+    function saveData(data: string) {
         setSelectedServices(prevState => ({
             ...prevState,
             data: data
@@ -155,7 +155,7 @@ export default function Profile() {
     }
 
     // Handle profile changes
-    function handleProfileChange(e) {
+    function handleProfileChange(e: { target: { name: any; value: any; }; }) {
         const { name, value } = e.target;
         setProfile(prevState => ({
             ...prevState,
@@ -164,7 +164,7 @@ export default function Profile() {
     }
 
     // Handle Texto changes
-    function handleTextoChange(e) {
+    function handleTextoChange(e: { target: { value: React.SetStateAction<string>; }; }) {
         setTexto(e.target.value);
     }
 

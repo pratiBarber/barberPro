@@ -1,4 +1,7 @@
+"use client"; // Certifique-se de que o arquivo é tratado como um componente do Next.js
+
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation'; // Importando useRouter
 
 interface LoginFormProps {
   onToggle: () => void;  // Callback para alternar entre formulários
@@ -6,9 +9,45 @@ interface LoginFormProps {
 
 const LoginForm: React.FC<LoginFormProps> = ({ onToggle }) => {
   const [showPassword, setShowPassword] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setSenha] = useState('');
+  const router = useRouter(); // Usando o useRouter
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const body = {
+      email,
+      password,
+    };
+
+    try {
+      const response = await fetch('https://s9efz9-ip-128-201-121-117.tunnelmole.net/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(body),
+      });
+
+      if (!response.ok) {
+        throw new Error('Erro ao fazer login');
+      }
+
+      const data = await response.json();
+
+      // Aqui você pode salvar o token, por exemplo, no localStorage
+      localStorage.setItem('token', data.token); // Supondo que o token seja retornado
+
+      // Redireciona para a página do usuário
+      router.push('/user');
+    } catch (error) {
+      console.error('Erro:', error);
+    }
   };
 
   return (
@@ -20,13 +59,15 @@ const LoginForm: React.FC<LoginFormProps> = ({ onToggle }) => {
           Registre-se
         </a>
       </p>
-      <form className="forms flex flex-col">
+      <form className="forms flex flex-col" onSubmit={handleSubmit}>
         <label htmlFor="email" className="mb-1 text-black text-sm md:text-base">Email</label>
         <input
           type="email"
           id="email"
           placeholder="Digite seu e-mail"
           className="inputss mb-3 p-2 h-[40px] text-sm md:text-base bg-[#CFB28F] rounded placeholder-gray-900 text-black"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)} // Atualizando o estado
         />
 
         <label htmlFor="senha" className="mb-1 text-black text-sm md:text-base">Senha</label>
@@ -36,6 +77,8 @@ const LoginForm: React.FC<LoginFormProps> = ({ onToggle }) => {
             id="senha"
             placeholder="Digite sua senha"
             className="inputss p-2 w-full h-[40px] text-sm md:text-base bg-[#CFB28F] rounded placeholder-gray-900 text-black"
+            value={password}
+            onChange={(e) => setSenha(e.target.value)} // Atualizando o estado
           />
           <button
             type="button"

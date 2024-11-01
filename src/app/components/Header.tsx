@@ -14,23 +14,43 @@ export default function Header() {
                 </div>
 
                 <div className="header-links flex flex-col md:flex-row md:gap-[67px] items-center">
-                    <a href="#">Início</a>
-                    <a href="#">Opinião dos Clientes</a>
+                <a 
+                        href="/"
+                        onClick={(e) => {
+                            e.preventDefault();  
+                            setIsMenuOpen(false);  
+                            router.push('/');  
+                        }}
+                    >  Início</a>
+                    <a 
+                        href="/review"
+                        onClick={(e) => {
+                            e.preventDefault();  
+                            setIsMenuOpen(false);  
+                            router.push('/review');  
+                        }}
+                    >  
+                        Opinião dos Clientes</a>
                 </div>
                 <div className="header-links flex flex-col md:flex-row md:gap-[67px] items-center mt-4 md:mt-0 custom-button-spacing">
                 <a
                         href="/login"
                         onClick={(e) => {
-                            e.preventDefault();  // Prevenir comportamento padrão
-                            setIsMenuOpen(false);  // Fechar o menu
-                            router.push('/login');  // Redirecionar para a página de login
+                            e.preventDefault();  
+                            setIsMenuOpen(false);  
+                            router.push('/login');  
                         }}
                     >
                         Fazer Login
                     </a>
                     <a
                         className="button px-10 py-2.5 rounded-lg bg-[#D99C52] text-white mt-4 md:mt-0"
-                        href="#"
+                        href="/login"
+                        onClick={(e) => {
+                            e.preventDefault();  
+                            setIsMenuOpen(false);  
+                            router.push('/login?register=true'); 
+                        }}
                     >
                         Crie sua Conta
                     </a>

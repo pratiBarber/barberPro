@@ -1,11 +1,18 @@
-"use client";  // Adiciona essa linha no início
+"use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';  
 import RegisterForm from '../components/RegisterForm';
 import LoginForm from '../components/LoginForm';
 
 const AuthPage: React.FC = () => {
+  const searchParams = useSearchParams();
   const [isRegister, setIsRegister] = useState(false);
+
+  useEffect(() => {
+    const registerParam = searchParams.get('register');
+    setIsRegister(registerParam === 'true');
+  }, [searchParams]);
 
   const toggleForm = () => {
     setIsRegister(!isRegister);
