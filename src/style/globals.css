@@ -108,3 +108,12 @@ body {
   background: url(/fundo.png);
   background-repeat: repeat;
 }
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
