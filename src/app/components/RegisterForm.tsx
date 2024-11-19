@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Alert from '@mui/material/Alert';
 
 interface RegisterFormProps {
   onToggle: () => void;
@@ -48,8 +49,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onToggle }) => {
     };
 
     // Envio da requisição POST
-    console.log(body);
-    fetch('https://s9efz9-ip-128-201-121-117.tunnelmole.net/api/auth/register', {
+    fetch('http://localhost:8080/api/auth/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -59,6 +59,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onToggle }) => {
       .then(response => response.json())
       .then(data => {
         console.log('Sucesso:', data);
+        // TO DO: COLOCAR NOTIFICAÇÃO PARA O USUÁRIO
       })
       .catch((error) => {
         console.error('Erro:', error);

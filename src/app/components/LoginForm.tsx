@@ -26,7 +26,7 @@ const LoginForm: React.FC<LoginFormProps> = ({ onToggle }) => {
     };
 
     try {
-      const response = await fetch('https://s9efz9-ip-128-201-121-117.tunnelmole.net/api/auth/login', {
+      const response = await fetch('http://localhost:8080/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

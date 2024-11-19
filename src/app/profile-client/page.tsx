@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
 import "./estilos.css";
 
 export default function Profile() {
@@ -26,7 +26,7 @@ export default function Profile() {
         setIsEditModalOpen(false);
     }
 
-    function handleProfileChange(e) {
+    function handleProfileChange(e: { target: { name: any; value: any; }; }) {
         const { name, value } = e.target;
         setProfile(prevState => ({
             ...prevState,
