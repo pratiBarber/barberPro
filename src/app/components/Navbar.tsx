@@ -4,14 +4,17 @@ export default function Navbar() {
     return (
         <nav className="nav-bar-pai">
             <div className="nav-bar-filho">
-                <img src="/logo.png" alt="logo" className="foto" />
+                <img src="/logo.png" alt="logo" className="foto" style={{ width: '100%', height: '100%' }} />
             </div>
+
+            <div className="mb-8">
+         
+        </div>
             <div className="nav-bar-links">
                 <ul>
                     <li><a href="#" className="hover:underline">Perfil</a></li>
-                    <li><a href="#" className="hover:underline">Home</a></li>
-                    <li><a href="#" className="hover:underline">Avaliações</a></li>
-                    <li><a href="#" className="hover:underline">Agendamentos</a></li>
+                    <li><a href="/user" className="hover:underline">Home</a></li>
+                    <li><a href="/select" className="hover:underline">Agendamentos</a></li>
                     <li><a href="#" className="hover:underline">Sair</a></li>
                 </ul>
             </div>

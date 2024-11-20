@@ -6,6 +6,7 @@ import { BsTrash } from "react-icons/bs";
 import { FaRegClock } from "react-icons/fa";
 import { IoCalendarSharp } from "react-icons/io5";
 import React, { useEffect, useState } from 'react';
+import Navbar from '../components/Navbar';
 
 interface Appointment {
   appointmentDateTime: string;
@@ -54,34 +55,8 @@ const Dashboard = () => {
   return (
     <div className="flex h-screen">
       {/* Barra Lateral */}
-      <aside className="w-1/5 bg-[#D99C52] flex flex-col items-center py-6">
-        <div className="mb-8">
-          <Image
-            src="/logo.png"
-            alt="Barber Logo"
-            width={100}
-            height={100}
-          />
-        </div>
-  
-        <nav className="space-y-6 text-white text-lg">
-          <Link href="" className="block hover:text-gray-300">
-            Perfil
-          </Link>
-          <Link href="" className="block hover:text-gray-300">
-            Agendamentos
-          </Link>
-          <Link href="" className="block hover:text-gray-300">
-            Avaliações
-          </Link>
-          <Link href="" className="block hover:text-gray-300">
-            Profissionais
-          </Link>
-          <Link href="" className="block hover:text-gray-300">
-            Sair
-          </Link>
-        </nav>
-      </aside>
+        <Navbar />
+     
 
       <main className="flex-1 relative bg-cover bg-center bg-[url('../../public/banner.jpg')]">
         <div className="absolute inset-0 bg-black opacity-70 z-0"></div>
