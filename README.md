@@ -1,12 +1,9 @@
-Aqui está a versão revisada e aprimorada do README, mantendo todo o conteúdo original, mas com melhorias na organização, clareza e fluidez do texto:
 
----
-
-# **Barber Platform** - Frontend
+# **Barber Search** - Frontend
 
 ## **Descrição**
 
-A **Barber Platform** é uma interface desenvolvida para conectar clientes e barbeiros, oferecendo recursos modernos como agendamento de serviços, gerenciamento de perfis e registro/login. Construída com **Next.js** e **TailwindCSS**, a plataforma entrega uma experiência responsiva, intuitiva e eficiente para ambos os tipos de usuários.
+A **Barber Search** é uma interface desenvolvida para conectar clientes e barbeiros, oferecendo recursos modernos como agendamento de serviços, gerenciamento de perfis e registro/login. Construída com **Next.js** e **TailwindCSS**, a plataforma entrega uma experiência responsiva, intuitiva e eficiente para ambos os tipos de usuários.
 
 ---
 
@@ -156,9 +153,3 @@ Abra [http://localhost:3000](http://localhost:3000) no navegador.
 - Teste as integrações com a API usando ferramentas como **Postman** ou **Insomnia**.
 
 ---
-
-**Desenvolvido com ❤️ para facilitar a conexão entre clientes e barbeiros!**  
-
----  
-
-O que achou dessa versão? Se tiver mais sugestões ou algo específico para ajustar, é só avisar! 😊
