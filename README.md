@@ -59,7 +59,8 @@ A arquitetura do projeto foi projetada para garantir modularidade e escalabilida
 
 #### **Home**
 
-![image](https://github.com/user-attachments/assets/1f49f6e7-be5a-4d37-af03-0e51b3789b74)
+![image](https://github.com/user-attachments/assets/b01d69dc-ad38-4f3d-b9db-d23230755004)
+
 
 #### **Avaliações**
 
