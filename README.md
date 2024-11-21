@@ -96,7 +96,9 @@ A arquitetura do projeto foi projetada para garantir modularidade e escalabilida
 
 #### **Perfil de um barbeiro (Barbeiro)**
 
-![image](https://github.com/user-attachments/assets/1e34dd18-080d-4b37-83dc-0e44726cf426)
+
+![image](https://github.com/user-attachments/assets/b9085fc4-b6fa-4729-8bf8-83766e82fd25)
+
 
 #### **Perfil de um barbeiro (Cliente)**
 
@@ -106,21 +108,26 @@ A arquitetura do projeto foi projetada para garantir modularidade e escalabilida
 
 #### **Perfil de um cliente**
 
-![image](https://github.com/user-attachments/assets/121633b0-5bde-4abe-be94-f2f88c6531db)
+
+![image](https://github.com/user-attachments/assets/a8c923f9-8f24-438c-8d80-84a4a547b37a)
+
 
 ---
 
 ### **4. Sistema de Busca**
 - Filtros avançados para refinar a pesquisa de barbeiros por localização, nome e preço.
 
-![Sistema de busca](https://github.com/user-attachments/assets/8aa43f65-da00-4e16-a185-ff0dbf928a00)
+![image](https://github.com/user-attachments/assets/86932bc2-77c3-4438-96fd-6e55843bc51f)
+
 
 ---
 
 ### **5. Agendamento**
 - Clientes escolhem horários disponíveis e confirmam serviços com facilidade.
 
-![Agendamento](https://github.com/user-attachments/assets/f17774c0-e410-432d-94dc-e55768e80500)
+
+![image](https://github.com/user-attachments/assets/6b1d18cf-921c-4200-a16f-4c1027666ce5)
+
 
 ---
 
