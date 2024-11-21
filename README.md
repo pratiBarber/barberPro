@@ -114,6 +114,9 @@ A arquitetura do projeto foi projetada para garantir modularidade e escalabilida
 ### **6. Gerenciamento de Serviços**
 - Barbeiros organizam agendamentos de forma interativa e prática.
 
+![image](https://github.com/user-attachments/assets/304bd519-3dad-4a35-8ae3-c659011ea40e)
+
+
 ---
 
 ## **Instalação e Execução**
