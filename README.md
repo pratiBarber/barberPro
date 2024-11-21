@@ -78,7 +78,9 @@ A arquitetura do projeto foi projetada para garantir modularidade e escalabilida
 
 #### **Tela de Login**
 
-![image](https://github.com/user-attachments/assets/f5e9d462-052a-4ef7-ae84-64871fe0f3d7)
+
+![image](https://github.com/user-attachments/assets/1ab906b1-8164-48cb-a23c-ee61e7d46a5d)
+
 
 ---
 
