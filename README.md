@@ -58,9 +58,11 @@ A arquitetura do projeto foi projetada para garantir modularidade e escalabilida
 - Apresenta informações gerais e avaliações de barbeiros para atrair usuários.
 
 #### **Home**
+
 ![image](https://github.com/user-attachments/assets/1f49f6e7-be5a-4d37-af03-0e51b3789b74)
 
 #### **Avaliações**
+
 ![image](https://github.com/user-attachments/assets/3786cc7f-3d39-4843-9855-b31f9183ec9c)
 
 ---
@@ -69,9 +71,11 @@ A arquitetura do projeto foi projetada para garantir modularidade e escalabilida
 - Permite que clientes e barbeiros criem contas ou acessem suas áreas exclusivas.
 
 #### **Tela de Registro**
+
 ![image](https://github.com/user-attachments/assets/cd69c89f-e844-47d1-bd42-2ab548f87a1e)
 
 #### **Tela de Login**
+
 ![image](https://github.com/user-attachments/assets/f5e9d462-052a-4ef7-ae84-64871fe0f3d7)
 
 ---
@@ -81,15 +85,19 @@ A arquitetura do projeto foi projetada para garantir modularidade e escalabilida
 - **Barbeiros**: Configuram horários, preços e gerenciam solicitações.
 
 #### **Home (pós login/cadastro)**
+
 ![image](https://github.com/user-attachments/assets/e171bd88-bb4e-4583-8d04-fdad053a7153)
 
 #### **Perfil de um barbeiro (Barbeiro)**
+
 ![image](https://github.com/user-attachments/assets/1e34dd18-080d-4b37-83dc-0e44726cf426)
 
 #### **Perfil de um barbeiro (Cliente)**
+
 ![image](https://github.com/user-attachments/assets/9c62b0bd-4325-4e6a-b405-6dcc3e0c0f21)
 
 #### **Perfil de um cliente**
+
 ![image](https://github.com/user-attachments/assets/121633b0-5bde-4abe-be94-f2f88c6531db)
 
 ---
