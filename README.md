@@ -90,7 +90,9 @@ A arquitetura do projeto foi projetada para garantir modularidade e escalabilida
 
 #### **Home (pós login/cadastro)**
 
-![image](https://github.com/user-attachments/assets/e171bd88-bb4e-4583-8d04-fdad053a7153)
+
+![image](https://github.com/user-attachments/assets/4bbe1571-292d-4e88-8bf4-5e988319c963)
+
 
 #### **Perfil de um barbeiro (Barbeiro)**
 
@@ -98,7 +100,9 @@ A arquitetura do projeto foi projetada para garantir modularidade e escalabilida
 
 #### **Perfil de um barbeiro (Cliente)**
 
-![image](https://github.com/user-attachments/assets/9c62b0bd-4325-4e6a-b405-6dcc3e0c0f21)
+
+![image](https://github.com/user-attachments/assets/bf415f84-4e72-45cd-8444-6a8d2e94ec83)
+
 
 #### **Perfil de um cliente**
 
